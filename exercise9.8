@@ -1,1 +1,64 @@
+ublic class Fan {    // Constants to denote fan speed
+    public static final int SLOW = 1;
+    public static final int MEDIUM = 2;
+    public static final int FAST = 3;
 
+    // Data fields (instance variables)
+    private int speed;
+    private boolean on;
+    private double radius;
+    private String color;
+
+    // No-arg constructor that creates a default fan
+    public Fan() {
+        this.speed = FAST;
+        this.on = false;
+        this.radius = 5.0;
+        this.color = "blue";
+    }
+    // Constructor that creates a fan with specified speed, on/off, radius and color
+    // Accessor methods (getters) to return the speed, on or off, radius and color
+    public int getSpeed() { //Accessor method to get the speed
+        return speed;// Return the speed
+    }
+
+    public boolean isOn() { //Accessor method to get on/off status
+        return on;// Return the status
+    }
+
+    public double getRadius() { //Accessor method to get the radius
+        return radius; // Return the radius
+    }
+
+    public String getColor() { //Accessor method to get the color
+        return color; // Return the color
+    }
+    
+    // Mutator methods (setters) to set the speed, on or off, radius and color
+    public void setSpeed(int speed) {// Mutator method to set the speed
+        this.speed = speed; // Set the speed
+    }
+
+    public void setOn(boolean on) { // Mutator method to set on/off status
+        this.on = on; // Set the status
+    }
+
+    public void setRadius(double radius) { // Mutator method to set the radius
+        this.radius = radius; // Set the radius
+    }
+
+    public void setColor(String color) { // Mutator method to set the color
+        this.color = color; // Set the color
+    }
+
+    // toString method to return a string description for the fan
+    @Override
+    public String toString() { // toString method to return a string description for the fan  
+        if (on) { // If the fan is on
+            return "Fan speed: " + speed + ", color: " + color + ", radius: " + radius;
+        } else { // If the fan is off
+            return "Fan color: " + color + ", radius: " + radius + " (fan is off)";
+        } // Return the description
+    }
+}
+// End of class Fan
