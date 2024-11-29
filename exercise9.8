@@ -62,3 +62,12 @@ public class Fan {    // Constants to denote fan speed
     }
 }
 // End of class Fan
+public class Main {
+    public static void main(String[] args) {
+        Fan myFan = new Fan();
+        // Example usage of Fan
+        myFan.setOn(true);
+        myFan.setSpeed(Fan.FAST);
+        System.out.println(myFan.toString());
+    }
+}
